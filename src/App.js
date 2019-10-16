@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+
+import Sidenav from "./toolbar/sidenav.js";
+import ToggleButton from "./toolbar/open-button"
+
+class App extends Component {
+
+  state = {
+    SNOpen: false,
+
+  };
+
+  SNTClickHandler =() => {
+    this.setState((prevState) => {
+      return {SNOpen: !prevState.SNOpen};
+    });
+  };
+
+  CloseClickHandler = () =>{
+    this.setState({SNOpen: false})
+  };
+
+
+
+  render(){
+
+    return(
+      <div className="App">
+        <div className="Slider">
+          <ToggleButton sideClickHandler={this.SNTClickHandler}/>
+        </div>
+        <Sidenav show={this.state.SNOpen} SNClick={this.CloseClickHandler}/>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default App

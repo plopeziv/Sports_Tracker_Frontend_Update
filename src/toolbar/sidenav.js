@@ -1,12 +1,7 @@
 import React from "react";
-import {BrowserRouter, Route, Link} from "react-router-dom";
 
 import "./toolbar-css/side-nav.css"
 
-import MainPage from "../Main-Page"
-import NBAApp from "../NBA-App"
-import NFLApp from "../NFL-App"
-import MLBApp from "../MLB-App"
 import CloseButton  from "./close-button"
 
 const Sidenav = props => {
@@ -17,7 +12,6 @@ const Sidenav = props => {
       navClasses="sidenav open"
     }
   return(
-    <BrowserRouter>
     <nav className= {navClasses}>
       <div className="sidediv">
         <CloseButton className="Button" click={props.SNClick}/>
@@ -36,13 +30,6 @@ const Sidenav = props => {
           </ul>
         </div>
     </nav>
-
-    <Route exact path="/" component={MainPage}/>
-    <Route path="/NBA" component={NBAApp}/>
-    <Route path="/NFL" component={NFLApp}/>
-    <Route path="/MLB" component={MLBApp}/>
-
-  </BrowserRouter>
   );
 };
 

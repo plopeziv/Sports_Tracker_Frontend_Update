@@ -1,22 +1,32 @@
-.App {
-  text-align: center;
+body {
+  /* background-image: url("../src/NFL-Components/images/football.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+  font-size: 14px;
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.Slider{
+  width: 50px;
+  height: 50px;
+  margin-top: 40px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  vertical-align: middle;
+  position: absolute;
+  z-index: 10;
 }
 
-.App-link {
-  color: #09d3ac;
+.app {
+  height:100%;
+  z-index: 2000;
+}
+
+.footer{
+  height: 50px;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: space-around;
 }
