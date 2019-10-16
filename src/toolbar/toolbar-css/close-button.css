@@ -1,4 +1,4 @@
-.button{
+.closeButton{
   display: flex;
   float: right;
   flex-direction: column;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-.marker{
+.closeMarker{
   width:25px;
   height: 3px;
   color: #B3B6B7;
