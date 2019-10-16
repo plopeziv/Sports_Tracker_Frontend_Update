@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./toolbar-css/close-button.css";
+
 
 const CloseButton = props => (
   <button className="button" onClick={props.click}>

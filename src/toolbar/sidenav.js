@@ -19,13 +19,13 @@ const Sidenav = props => {
             <li></li>
             <li> <a href="/"> Main Page </a> </li>
             <li>
-              <Link to="/NBA/ScoringSummary"> NBA Dashboard </Link>
+              NBA Dashboard
             </li>
             <li>
-              <Link to="/NFL/Leaderboard"> NFL Dashboard </Link>
+              NFL Dashboard
             </li>
             <li>
-              <Link to="/MLB"> MLB Dashboard </Link>
+              MLB Dashboard
             </li>
           </ul>
         </div>
