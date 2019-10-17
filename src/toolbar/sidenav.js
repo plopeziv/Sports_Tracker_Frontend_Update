@@ -4,7 +4,9 @@ import {BrowserRouter, Route, Link} from "react-router-dom";
 import "./toolbar-css/side-nav.css"
 
 import CloseButton  from "./close-button"
+
 import MainPage from "../Main-Page"
+import MLBApp from "../MLB-App"
 
 const Sidenav = props => {
 
@@ -28,14 +30,15 @@ const Sidenav = props => {
               NFL Dashboard
             </li>
             <li>
-              MLB Dashboard
+              <Link to="/MLB"> MLB Dashboard </Link>
             </li>
           </ul>
         </div>
     </nav>
 
     <Route exact path="/" component={MainPage}/>
-    
+    <Route path="/MLB" component={MLBApp}/>
+
   </BrowserRouter>
   );
 };
