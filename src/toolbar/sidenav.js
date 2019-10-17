@@ -6,6 +6,7 @@ import "./toolbar-css/side-nav.css"
 import CloseButton  from "./close-button"
 
 import MainPage from "../Main-Page"
+import NFLApp from "../NFL-App"
 import MLBApp from "../MLB-App"
 
 const Sidenav = props => {
@@ -27,7 +28,7 @@ const Sidenav = props => {
               NBA Dashboard
             </li>
             <li>
-              NFL Dashboard
+              <Link to="/NFL/Leaderboard"> NFL Dashboard </Link>
             </li>
             <li>
               <Link to="/MLB"> MLB Dashboard </Link>
@@ -37,6 +38,7 @@ const Sidenav = props => {
     </nav>
 
     <Route exact path="/" component={MainPage}/>
+    <Route path="/NFL" component={NFLApp}/>
     <Route path="/MLB" component={MLBApp}/>
 
   </BrowserRouter>

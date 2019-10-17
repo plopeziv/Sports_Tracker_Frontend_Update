@@ -1,0 +1,48 @@
+.bottomHalf{
+  height:62%;
+  display:flex;
+  justify-content:space-evenly;
+}
+
+.dropCollapse{
+  position: absolute;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14);
+}
+
+.dropDown{
+  font-size: 14px;
+  vertical-align:top;
+  margin-right:10px;
+}
+.dStat{
+  width:45%;
+  border-style:outset;
+  background-color:white;
+}
+.PlayerCard {
+  width: 512px;
+  height: 100%;
+  display:inline-block;
+  border-style:ridge;
+  background-color: #F2F3F4;
+  opacity:0.94;
+}
+
+.playerStat{
+  width: 45%;
+  border-style:outset;
+  background-color:white;
+}
+
+.StatCard{
+  width:90%;
+  display: grid;
+  margin:auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.topHalf{
+  margin-top:30px;
+  height: 28%;
+}
