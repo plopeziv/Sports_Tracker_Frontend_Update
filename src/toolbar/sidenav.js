@@ -1,8 +1,10 @@
 import React from "react";
+import {BrowserRouter, Route, Link} from "react-router-dom";
 
 import "./toolbar-css/side-nav.css"
 
 import CloseButton  from "./close-button"
+import MainPage from "../Main-Page"
 
 const Sidenav = props => {
 
@@ -12,6 +14,7 @@ const Sidenav = props => {
       navClasses="sidenav open"
     }
   return(
+    <BrowserRouter>
     <nav className= {navClasses}>
       <div className="sidediv">
         <CloseButton className="Button" click={props.SNClick}/>
@@ -30,6 +33,10 @@ const Sidenav = props => {
           </ul>
         </div>
     </nav>
+
+    <Route exact path="/" component={MainPage}/>
+    
+  </BrowserRouter>
   );
 };
 
