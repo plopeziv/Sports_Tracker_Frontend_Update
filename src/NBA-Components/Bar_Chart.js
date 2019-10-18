@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-
-//import axios from "axios";
+import Plot from "react-plotly.js"
 
 
 class FirstPlot extends Component{
@@ -37,7 +36,31 @@ class FirstPlot extends Component{
 
       return(
         <div className="Contract-data">
-        Chart Goes Here
+        <Plot
+          data={[
+            {
+              x: ["2019-20","2020-21","2021-22","2022-23", "2023-24"],
+              y: ylist,
+              type: "bar",
+              mode: "markers",
+              marker: {color: "Blue"},
+            }
+          ]}
+
+          layout ={{
+            title: player + "'s Contract Obligations",
+            autosize: false,
+            width:750,
+            height:410,
+            yaxis:{
+              title: "Money Owed",
+              range: [0, 50000000]
+            },
+            xaxis: {
+              title: "Year"
+            },
+          }}
+        />
         </div>
       )
     }
