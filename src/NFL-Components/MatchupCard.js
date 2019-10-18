@@ -85,15 +85,20 @@ class MatchupCard extends Component{
               }}/>
 
               <div className="CardHeading" style={{
-                display:"inline-block"
+                display:"inline-block",
+                height:"30px",
               }}>
-                <h5>
-                  <FilterButton
-                  currentTeam = {this.state.team.toUpperCase()}
-                  teams = {teamList}
-                  select = {this.teamSelect.bind(this)}
-                  />
-                </h5>
+                <div className="filterContainer" style={{
+                  transform:"translate(-7%,-140%)"
+                }}>
+                  <h5>
+                    <FilterButton
+                    currentTeam = {this.state.team.toUpperCase()}
+                    teams = {teamList}
+                    select = {this.teamSelect.bind(this)}
+                    />
+                  </h5>
+                </div>
               </div>
 
               <div className="StatCard">

@@ -13,7 +13,7 @@ class MainPage extends Component {
 
     return(
       <div className="Main_Page">
-        <div className = "AppContainers">
+        <div className = "MainContainers">
 
           <div className = "App_Card">
             <div className ="Icon_Container">

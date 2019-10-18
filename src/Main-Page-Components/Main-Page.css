@@ -4,10 +4,10 @@
   height:100%;
   text-align: center;
 }
-.App_Containers{
+.MainContainers{
   height:300px;
-  width:75%;
-  transform: translate(0%, 35%);
+  width:90%;
+  transform: translate(0%, 30%);
 }
 
 .Icon_Container{

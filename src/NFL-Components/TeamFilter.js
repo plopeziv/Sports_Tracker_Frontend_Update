@@ -44,6 +44,7 @@ class FilterButton extends Component{
         backgroundColor:"rgb(153, 163, 164)",
         width: "100px",
         position:"relative",
+        height:"25px",
       }}>
         <div className="buttonHeader">
           vs {this.props.currentTeam}
@@ -52,15 +53,16 @@ class FilterButton extends Component{
       {this.state.displayMenu ? (
         <div className="dropDiv" style={{
           backgroundColor:"rgb(229, 232, 232)",
-          height:"95px",
-          marginTop:"127px",
+          height:"75px",
+          transform: "translate(0%, 70%)",
+          position:"absolute"
         }}>
           <div className="dropContent">
             <ul style={{
               overflow:"auto",
-              height:"95px",
+              height:"75px",
               float:"left",
-              direction:"rtl"
+              direction:"rtl",
             }}>
               {this.props.teams.map(item=> <li
                 onClick= {() => {this.changeTeam(item);}}>
