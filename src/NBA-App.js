@@ -3,9 +3,6 @@ import React, { Component } from "react";
 import "./NBA-App.css";
 
 import ToolBar from "./NBA-Components/NBAtoolbar";
-import ScatterApp from "./NBA-Components/Scatter_Container";
-import FirstPlot from "./NBA-Components/Bar_Chart";
-import PlayerApp from "./NBA-Components/Player_Container";
 
 class NBAApp extends Component {
 
@@ -24,7 +21,7 @@ class NBAApp extends Component {
   }
 
   componentWillMount(){
-    fetch("http://localhost:8000/nba_package/Summary/?format=json")
+    fetch("https://plopez9.herokuapp.com/NBA/Summary/?format=json")
     .then(response => response.json())
     .then(json => {
       this.setState({
@@ -32,7 +29,7 @@ class NBAApp extends Component {
       })
     });
 
-    fetch("http://localhost:8000/nba_package/PlayerInfo/?format=json")
+    fetch("https://plopez9.herokuapp.com/NBA/PlayerInfo/?format=json")
     .then(response => response.json())
     .then(json => {
       this.setState({
@@ -40,7 +37,7 @@ class NBAApp extends Component {
       })
     });
 
-    fetch("http://localhost:8000/nba_package/Contracts/?format=json")
+    fetch("https://plopez9.herokuapp.com/NBA/Contracts/?format=json")
     .then(response => response.json())
     .then(json => {
       this.setState({
@@ -58,12 +55,6 @@ class NBAApp extends Component {
       <ToolBar nameSelect={this.PlayerSelect.bind(this)}
       player={this.state.Player}/>
 
-        <div className="TopRow">
-
-        </div>
-
-        <div className="Row">
-        </div>
 
       </div>
     );
