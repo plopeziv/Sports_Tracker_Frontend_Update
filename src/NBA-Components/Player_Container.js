@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./bootstrap.min.css";
 import"./NBA-Component-css/Player_Container.css";
+
 import avatar from "./images/default-avatar.png";
 
 
@@ -44,8 +45,9 @@ class PlayerApp extends Component {
     })
 
     return(
-      <div className="Player-data">
-      <div className="App">
+      <div className="Player-data" style={{
+        height: "340px",
+      }}>
         <div className="card">
 
             <div className="Player_Row" >
@@ -162,7 +164,6 @@ class PlayerApp extends Component {
               </div>
             </div>
         </div>
-      </div>
       </div>
     );
   }

@@ -31,51 +31,54 @@ class PlayerComparison extends Component{
     });
 
     return(
-      <Plot
-        style={{
-          height:"420px",
-          width: "840px",
-          display: "inline-block",
-        }}
-        data = {[
-          {
-            x:firstStat.map(item => item.week),
-            y:firstStat.map(item => item.yh_points),
-            type: "line",
-            mode: "lines+markers",
-            marker: {color:"Blue"},
-            hoverinfo: "y",
-            name: p1,
-          },
+      <div className="pcContainer" style={{
+        height: "75%",
+      }}>
+        <Plot
+          style={{
+            width: "840px",
+            display: "inline-block",
+          }}
+          data = {[
+            {
+              x:firstStat.map(item => item.week),
+              y:firstStat.map(item => item.yh_points),
+              type: "line",
+              mode: "lines+markers",
+              marker: {color:"Blue"},
+              hoverinfo: "y",
+              name: p1,
+            },
 
-          {
-            x:secondStat.map(item => item.week),
-            y:secondStat.map(item => item.yh_points),
-            type: "line",
-            mode: "lines+markers",
-            marker: {color:"Red"},
-            hoverinfo: "y",
-            name: p2,
-          },
-        ]}
+            {
+              x:secondStat.map(item => item.week),
+              y:secondStat.map(item => item.yh_points),
+              type: "line",
+              mode: "lines+markers",
+              marker: {color:"Red"},
+              hoverinfo: "y",
+              name: p2,
+            },
+          ]}
 
-        layout ={{
-          autosize: true,
+          layout ={{
+            autosize: true,
 
-          title:{
-            text: "Weekly Fantasy Performance"
-          },
-          yaxis:{
-            title: "Fantasy Points Scored"
-          },
-          xaxis:{
-            title: "Scheduled Week",
-            dtick: 1,
-            showgrid: "True",
-            range: [0,17.2],
-          }
-        }}
-      />
+            title:{
+              text: "Weekly Fantasy Performance"
+            },
+            yaxis:{
+              title: "Fantasy Points Scored"
+            },
+            xaxis:{
+              title: "Scheduled Week",
+              dtick: 1,
+              showgrid: "True",
+              range: [0,17.2],
+            }
+          }}
+        />
+      </div>
     );
   }
 }

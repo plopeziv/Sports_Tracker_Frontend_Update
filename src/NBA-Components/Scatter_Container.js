@@ -23,7 +23,11 @@ class ScatterApp extends Component {
     return(
       <div className="TopRow" style={{width:"80%"}}>
         <div className="testdiv">
-          <div className="card  card-tasks" >
+          <div className="card  card-tasks" style={{
+            overflow: "auto",
+            transform:"translate(0%, 5%)",
+            height:"40%",
+          }}>
             <SecondPlot
             data={this.state.SummaryItems}
             player={this.props.player}/>

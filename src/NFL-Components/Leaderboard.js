@@ -62,7 +62,9 @@ class LeaderTable extends Component{
 
       return(
 
-          <div className="DisplayTable">
+          <div className="DisplayTable" style={{
+            height:"75%",
+          }}>
             <thead className="Table-Header">
               <tr>
               <th> Player</th>

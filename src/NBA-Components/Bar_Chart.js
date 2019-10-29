@@ -35,7 +35,11 @@ class FirstPlot extends Component{
 
 
       return(
-        <div className="Contract-data">
+        <div className="Contract-data" style={{
+          width: "70%",
+          height: "90%",
+          transform:"translate(0%,5%)"
+        }}>
         <Plot
           data={[
             {
@@ -49,9 +53,6 @@ class FirstPlot extends Component{
 
           layout ={{
             title: player + "'s Contract Obligations",
-            autosize: false,
-            width:750,
-            height:410,
             yaxis:{
               title: "Money Owed",
               range: [0, 50000000]

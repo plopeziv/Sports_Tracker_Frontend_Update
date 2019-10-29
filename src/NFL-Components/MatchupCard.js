@@ -14,7 +14,7 @@ class MatchupCard extends Component{
     super(props);
     this.state = {
       team: "chi",
-      defense:[],
+      defense:["chi"],
     };
   }
 
