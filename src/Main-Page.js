@@ -17,7 +17,7 @@ class MainPage extends Component {
 
           <div className = "App_Card">
             <div className ="Icon_Container">
-              <a href="https://plopez23.herokuapp.com/NBA/ScoringSummary">
+              <a href="http://localhost:3000/NBA/ScoringSummary">
                 <img src={basketball} style={{
                   height:"auto",
                   width:"50%"}}/>
@@ -28,7 +28,7 @@ class MainPage extends Component {
 
           <div className= "App_Card">
             <div className ="Icon_Container">
-              <a href="https://plopez23.herokuapp.com/NFL/Leaderboard">
+              <a href="http://localhost:3000/NFL/Leaderboard">
                 <img src={football} style={{
                   height:"auto",
                   width:"50%"}}/>
@@ -39,7 +39,7 @@ class MainPage extends Component {
 
           <div className="App_Card">
             <div className ="Icon_Container">
-              <a href="https://plopez23.herokuapp.com/MLB">
+              <a href="http://localhost:3000/MLB">
                 <img src={baseball} style={{
                   height:"auto",
                   width:"50%"}}/>

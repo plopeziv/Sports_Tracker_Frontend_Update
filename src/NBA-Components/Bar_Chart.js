@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Plot from "react-plotly.js"
 
 
 class FirstPlot extends Component{
@@ -9,7 +8,7 @@ class FirstPlot extends Component{
   }
 
   componentWillMount(){
-    fetch("https://plopez9.herokuapp.com/NBA/Contracts/?format=json")
+    fetch("http://localhost:8000/NBA/Contracts/?format=json")
     .then(response => response.json())
     .then(json => {
       this.setState({
@@ -40,28 +39,7 @@ class FirstPlot extends Component{
           height: "90%",
           transform:"translate(0%,5%)"
         }}>
-        <Plot
-          data={[
-            {
-              x: ["2019-20","2020-21","2021-22","2022-23", "2023-24"],
-              y: ylist,
-              type: "bar",
-              mode: "markers",
-              marker: {color: "Blue"},
-            }
-          ]}
-
-          layout ={{
-            title: player + "'s Contract Obligations",
-            yaxis:{
-              title: "Money Owed",
-              range: [0, 50000000]
-            },
-            xaxis: {
-              title: "Year"
-            },
-          }}
-        />
+          Insert Contract Bar Chart
         </div>
       )
     }

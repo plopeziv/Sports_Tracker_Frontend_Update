@@ -14,7 +14,7 @@ class PlayerApp extends Component {
   }
 
   componentWillMount(){
-    fetch("https://plopez9.herokuapp.com/NBA/Summary/?format=json")
+    fetch("http://localhost:8000/NBA/Summary/?format=json")
     .then(response => response.json())
     .then(json => {
       this.setState({
@@ -22,7 +22,7 @@ class PlayerApp extends Component {
       })
     });
 
-    fetch("https://plopez9.herokuapp.com/NBA/PlayerInfo/?format=json")
+    fetch("http://localhost:8000/NBA/PlayerInfo/?format=json")
     .then(response => response.json())
     .then(json => {
       this.setState({
