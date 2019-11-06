@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import ReactEcharts from "echarts-for-react";
 
 class FirstPlot extends Component{
 
@@ -37,9 +37,24 @@ class FirstPlot extends Component{
         <div className="Contract-data" style={{
           width: "70%",
           height: "90%",
-          transform:"translate(0%,5%)"
+          transform:"translate(0%,5%)",
+          background:"white",
         }}>
-          Insert Contract Bar Chart
+        <ReactEcharts option={{
+          xAxis: {
+            type: "category",
+            data: ["2020", "2021", "2022", "2023", "2024", "2025"]
+          },
+
+          yAxis:{
+            type: "value"
+          },
+
+          series:[{
+            data: ylist,
+            type: "bar"
+          }]
+        }} />
         </div>
       )
     }
