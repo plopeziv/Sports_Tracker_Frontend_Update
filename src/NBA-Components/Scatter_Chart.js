@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import ReactEcharts from "echarts-for-react";
 
 
 class SecondPlot extends Component{
@@ -12,9 +12,27 @@ class SecondPlot extends Component{
       return item.player.toLowerCase() === player.toLowerCase()
     });
 
+    console.log(data)
+
 
       return(
-        <div> Insert Scatter Plot </div> 
+        <div>
+          <ReactEcharts option={{
+            xAxis: {
+              type: "value",
+              data: data.map(item => item.mp)
+            },
+
+            yAxis:{
+              type: "value",
+              data: data.map(item => item.pts),
+            },
+
+            series:[{
+              type: "scatter"
+            }]
+          }} />
+        </div>
       )
     }
 
