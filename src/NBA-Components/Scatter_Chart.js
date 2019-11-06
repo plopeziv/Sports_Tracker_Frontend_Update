@@ -12,25 +12,83 @@ class SecondPlot extends Component{
       return item.player.toLowerCase() === player.toLowerCase()
     });
 
-    console.log(data)
+    var dataArray = [data.map(item =>[item.mp, item.pts, item.player]),][0]
+    var playerArray = [pdata.map(item => [item.mp, item.pts, item.player],)][0]
 
 
       return(
-        <div>
-          <ReactEcharts option={{
-            xAxis: {
-              type: "value",
-              data: data.map(item => item.mp)
-            },
+        <div style ={{
+        }}>
+          <ReactEcharts
+          style ={{
+            height:"450px",
+            width:"100%",
+          }}
 
-            yAxis:{
-              type: "value",
-              data: data.map(item => item.pts),
+          option={{
+            title: {
+              text: "2020 Scoring Summary",
+              left:"center",
+              top: "3%",
             },
 
             series:[{
-              type: "scatter"
-            }]
+              type: "scatter",
+              symbolSize:6,
+              data:dataArray,
+              color:"#0000FF",
+              label:{
+                emphasis:{
+                  show:"true",
+                  position:"top",
+                  formatter: function (param) {
+                    return param.data[2];
+                  },
+                  color: "#FF0000",
+                  fontWeight: "bolder",
+                  fontSize: "15"
+                }
+              }
+            },
+
+            {
+              type: "scatter",
+              symbolSize: 20,
+              data: playerArray,
+              color:"#FF0000",
+              label:{
+                emphasis:{
+                  show:"true",
+                  position:"top",
+                  fontWeight:"bolder",
+                  fontSize:"15",
+                  formatter: function (param) {
+                    return param.data[2];
+                  },
+                }
+              }
+            }
+          ],
+
+          xAxis: {
+            name: "Minutes Played",
+            nameLocation: "middle",
+            nameTextStyle: {
+              fontWeight: "bold",
+              fontSize: "15",
+            },
+            nameGap: "25",
+          },
+
+          yAxis:{
+            name: "Points Scored",
+            nameLocation: "middle",
+            nameTextStyle: {
+              fontWeight: "bold",
+              fontSize:"15",
+              padding: [0,0,20,0],
+              },
+          },
           }} />
         </div>
       )

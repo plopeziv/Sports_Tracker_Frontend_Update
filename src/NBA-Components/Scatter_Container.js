@@ -24,7 +24,6 @@ class ScatterApp extends Component {
       <div className="TopRow" style={{width:"80%"}}>
         <div className="testdiv">
           <div className="card  card-tasks" style={{
-            overflow: "auto",
             transform:"translate(0%, 5%)",
             height:"40%",
           }}>
