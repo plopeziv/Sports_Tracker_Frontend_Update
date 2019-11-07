@@ -37,18 +37,6 @@ class SecondPlot extends Component{
               symbolSize:6,
               data:dataArray,
               color:"#0000FF",
-              label:{
-                emphasis:{
-                  show:"true",
-                  position:"top",
-                  formatter: function (param) {
-                    return param.data[2];
-                  },
-                  color: "#FF0000",
-                  fontWeight: "bolder",
-                  fontSize: "15"
-                }
-              }
             },
 
             {
@@ -56,17 +44,6 @@ class SecondPlot extends Component{
               symbolSize: 20,
               data: playerArray,
               color:"#FF0000",
-              label:{
-                emphasis:{
-                  show:"true",
-                  position:"top",
-                  fontWeight:"bolder",
-                  fontSize:"15",
-                  formatter: function (param) {
-                    return param.data[2];
-                  },
-                }
-              }
             }
           ],
 
@@ -88,6 +65,11 @@ class SecondPlot extends Component{
               fontSize:"15",
               padding: [0,0,20,0],
               },
+          },
+          tooltip:{
+            formatter: function (param) {
+              return param.data[2];
+            }
           },
           }} />
         </div>
