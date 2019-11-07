@@ -8,7 +8,7 @@ class FirstPlot extends Component{
   }
 
   componentWillMount(){
-    fetch("http://localhost:8000/NBA/Contracts/?format=json")
+    fetch("https://plopez9.herokuapp.com/NBA/Contracts/?format=json")
     .then(response => response.json())
     .then(json => {
       this.setState({

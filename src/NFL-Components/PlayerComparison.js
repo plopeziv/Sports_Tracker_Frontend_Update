@@ -9,7 +9,7 @@ class PlayerComparison extends Component{
 
   componentWillMount(){
 
-    fetch("http://localhost:8000/NFL/NFLStats/?format=json")
+    fetch("https://plopez9.herokuapp.com/NFL/NFLStats/?format=json")
     .then(response => response.json())
     .then(json => {
       this.setState({
@@ -109,7 +109,7 @@ class PlayerComparison extends Component{
         },
 
         tooltip:{
-          
+
         },
         }} />
       </div>
