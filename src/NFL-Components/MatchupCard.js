@@ -45,7 +45,7 @@ class MatchupCard extends Component{
       && item.oppt === this.state.team)
     })
 
-    var teamList = [... new Set (this.state.defense.map(item=>
+    var teamList = [...new Set (this.state.defense.map(item=>
     item.oppt))];
 
       return(
@@ -56,7 +56,7 @@ class MatchupCard extends Component{
 
             <div className="playerStat">
 
-              <img src={avatar} style={{
+              <img src={avatar} alt="" style={{
                 height:"68%",
                 marginBottom:"4px",
               }}/>
@@ -77,7 +77,7 @@ class MatchupCard extends Component{
             </div>
 
             <div className="dStat">
-              <img src={helmet} style={{
+              <img src={helmet} alt="" style={{
                 marginTop:"15px",
                 height:"60%",
                 width:"98%",

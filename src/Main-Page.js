@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import "./Main-Page-Components/Main-Page.css";
 
@@ -7,18 +7,14 @@ import football from "./Main-Page-Components/images/Football.jpg";
 import baseball from "./Main-Page-Components/images/Baseball.png";
 import resume from "./Main-Page-Components/images/Resume.png";
 
-class MainPage extends Component {
-
-  render(){
-
-    return(
+const MainPage = () =>  (
       <div className="Main_Page">
         <div className = "MainContainers">
 
           <div className = "App_Card">
             <div className ="Icon_Container">
               <a href="http://localhost:3000/NBA/ScoringSummary">
-                <img src={basketball} style={{
+                <img src={basketball} alt='' style={{
                   height:"auto",
                   width:"50%"}}/>
               </a>
@@ -29,7 +25,7 @@ class MainPage extends Component {
           <div className= "App_Card">
             <div className ="Icon_Container">
               <a href="http://localhost:3000/NFL/Leaderboard">
-                <img src={football} style={{
+                <img src={football} alt='' style={{
                   height:"auto",
                   width:"50%"}}/>
               </a>
@@ -40,7 +36,7 @@ class MainPage extends Component {
           <div className="App_Card">
             <div className ="Icon_Container">
               <a href="http://localhost:3000/MLB">
-                <img src={baseball} style={{
+                <img src={baseball} alt='' style={{
                   height:"auto",
                   width:"50%"}}/>
               </a>
@@ -50,7 +46,7 @@ class MainPage extends Component {
 
           <div className="App_Card">
             <div className ="Icon_Container">
-              <img src={resume} style={{
+              <img src={resume} alt='' style={{
                 height:"auto",
                 width:"50%"}}/>
               <h2> Resume </h2>
@@ -59,9 +55,6 @@ class MainPage extends Component {
 
         </div>
       </div>
-
-    );
-  }
-}
+);
 
 export default MainPage

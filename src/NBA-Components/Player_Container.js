@@ -53,7 +53,7 @@ class PlayerApp extends Component {
             <div className="Player_Row" >
               <div className="Player_Column">
                 <div className="card-header">
-                  <img src={avatar}/>
+                  <img src={avatar} alt="" />
                 </div>
               </div>
 
