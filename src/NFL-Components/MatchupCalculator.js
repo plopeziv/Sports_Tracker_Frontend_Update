@@ -1,13 +1,13 @@
 import React from "react";
 
-const Calculator = () => {
+const Calculator = ({pinfo, oppTeam}) => {
 
-  let score1 = this.props.pinfo.map(item => item.average_points_scored)
-  let std1 = this.props.pinfo.map(item=> item.std)
+  const score1 = pinfo.map(item => item.average_points_scored)
+  const std1 = pinfo.map(item=> item.std)
 
-  let score2 = this.props.oppTeam.map(item => item.points_allowed)
-  let std2 = this.props.oppTeam.map(item=> item.std)
-  let delta = Math.max(score1, score2)-Math.min(score1,score2)
+  const score2 = oppTeam.map(item => item.points_allowed)
+  const std2 = oppTeam.map(item=> item.std)
+  const delta = Math.max(score1, score2)-Math.min(score1,score2)
   var ratio = 1
 
   if (score1 > score2){
