@@ -3,9 +3,9 @@ import {BrowserRouter, Route, NavLink,} from "react-router-dom";
 
 import "./NFL-css/NflToolbar.css";
 
-import LeaderTable from "./Leaderboard";
-import PlayerComparison from "./PlayerComparison";
-import Matchup from "./Matchup";
+import LeaderTable from "./Leaderboard-Page/Leaderboard";
+import PlayerComparison from "./Player-Comparison-Page/PlayerComparison";
+import Matchup from "./Matchup-Page/Matchup";
 import SearchTool from "./SearchTool";
 
 class NflToolbar extends Component {

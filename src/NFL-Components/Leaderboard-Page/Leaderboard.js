@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./NFL-css/Leaderboard.css"
+import "../NFL-css/Leaderboard.css"
 
 class LeaderTable extends Component{
   state ={

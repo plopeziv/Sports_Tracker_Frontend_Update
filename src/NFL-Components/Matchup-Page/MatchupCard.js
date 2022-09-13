@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-import "./NFL-css/Matchup.css"
+import "../NFL-css/Matchup.css"
 
 import Calculator from "./MatchupCalculator"
 import FilterButton from "./TeamFilter"
 
-import avatar from "./images/default-avatar.png";
-import helmet from "./images/Generic-Helmet.png";
+import avatar from "../images/default-avatar.png";
+import helmet from "../images/Generic-Helmet.png";
 
 
 const MatchupCard = ({player, stats}) => {

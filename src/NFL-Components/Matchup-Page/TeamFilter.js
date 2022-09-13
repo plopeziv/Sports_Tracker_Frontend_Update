@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./NFL-css/TeamFilter.css"
+import "../NFL-css/TeamFilter.css"
 
 class FilterButton extends Component{
   constructor(props){
