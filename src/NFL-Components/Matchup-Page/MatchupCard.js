@@ -13,7 +13,7 @@ const MatchupCard = ({player, stats}) => {
   const [team, setTeam] = useState('chi');
   const [defense, setDefense] = useState(['chi']);
 
-  useEffect ( () =>{
+  useEffect ( () => {
     fetch("https://plopez9.herokuapp.com/NFL/DefensiveSummary/?format=json")
     .then(response => response.json())
     .then(json => {

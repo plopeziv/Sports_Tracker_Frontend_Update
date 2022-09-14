@@ -1,25 +1,20 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../NFL-css/Leaderboard.css"
 
-class LeaderTable extends Component{
-  state ={
-    YearlyStats: [],
-  };
+const LeaderTable = () => {
+  const [yearlyStats, setYearlyStats] = useState([])
 
-  componentWillMount(){
-
+  useEffect( () => {
     fetch("https://plopez9.herokuapp.com/NFL/NFLSummary/?format=json")
     .then(response => response.json())
     .then(json => {
-      this.setState({
-        YearlyStats: json,
-      })
+      setYearlyStats(json)
     });
-  };
+  }, []);
 
-  TableBody(){
-    return this.state.YearlyStats.map((player, index) =>{
+  const tableBody = () => {
+    return yearlyStats.map((player, index) =>{
       const{name, pos, year, gp, average_points_scored, std, average_points_allowed, defense_std} = player
       return(
         <tr key={name}>
@@ -52,37 +47,34 @@ class LeaderTable extends Component{
     })
   }
 
-  render(){
+  function compare (a,b){
+    return b.average_points_scored - a.average_points_scored
+  }
 
-    function compare (a,b){
-      return b.average_points_scored - a.average_points_scored
-    }
+  yearlyStats.sort(compare)
 
-    this.state.YearlyStats.sort(compare)
+  return(
 
-      return(
-
-          <div className="DisplayTable" style={{
-            height:"75%",
-          }}>
-            <thead className="Table-Header">
-              <tr>
-              <th> Player</th>
-              <th> Pos </th>
-              <th> Year </th>
-              <th> GP </th>
-              <th> Average Points Scored </th>
-              <th> STD </th>
-              <th> Average Points Allowed </th>
-              <th> STD </th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.TableBody()}
-            </tbody>
-          </div>
-      );
-    }
+      <div className="DisplayTable" style={{
+        height:"75%",
+      }}>
+        <thead className="Table-Header">
+          <tr>
+          <th> Player</th>
+          <th> Pos </th>
+          <th> Year </th>
+          <th> GP </th>
+          <th> Average Points Scored </th>
+          <th> STD </th>
+          <th> Average Points Allowed </th>
+          <th> STD </th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableBody()}
+        </tbody>
+      </div>
+  );
 }
 
 
