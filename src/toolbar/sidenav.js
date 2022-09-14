@@ -8,7 +8,7 @@ import CloseButton  from "./close-button"
 import MainPage from "../Main-Page"
 import NBAApp from "../NBA-App"
 import NFLApp from "../NFL-Components/NFL-App"
-import MLBApp from "../MLB-App"
+import MLBApp from "../MLB-Components/MLB-App"
 
 const Sidenav = props => {
 
