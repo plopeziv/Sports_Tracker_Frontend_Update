@@ -6,7 +6,7 @@ import "./toolbar-css/side-nav.css"
 import CloseButton  from "./close-button"
 
 import MainPage from "../Main-Page"
-import NBAApp from "../NBA-App"
+import NBAApp from "../NBA-Components/NBA-App"
 import NFLApp from "../NFL-Components/NFL-App"
 import MLBApp from "../MLB-Components/MLB-App"
 

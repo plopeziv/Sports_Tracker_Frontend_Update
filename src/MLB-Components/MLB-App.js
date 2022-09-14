@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
 import "./mlb.css";
 
 const MLBApp = () => {
-  
+
   return(
     <div className="MLBApp">
       <div className="content">

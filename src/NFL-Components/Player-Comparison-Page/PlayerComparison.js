@@ -13,19 +13,16 @@ const PlayerComparison = ({player1, player2}) => {
     );
   }, []);
 
-  var p1 = player1
-  var p2 = player2
-
   var firstStat = weeklyStats.filter(function(item){
-    return item.name === p1
+    return item.name === player1
   });
 
   var secondStat = weeklyStats.filter(function(item){
-    return item.name === p2
+    return item.name === player2
   });
 
-  var player1 = [firstStat.map(item => [item.week, item.yh_points]),][0]
-  var player2 = [secondStat.map(item => [item.week, item.yh_points]),][0]
+  var player1Stat = [firstStat.map(item => [item.week, item.yh_points]),][0]
+  var player2Stat = [secondStat.map(item => [item.week, item.yh_points]),][0]
 
   return(
     <div className="pcContainer" style={{
@@ -52,16 +49,16 @@ const PlayerComparison = ({player1, player2}) => {
           {
           type: "line",
           symbolSize:6,
-          data:player1,
-          name: p1,
+          data:player1Stat,
+          name: player1,
           color:"#0000FF",
         },
 
         {
           type: "line",
           symbolSize: 6,
-          name: p2,
-          data: player2,
+          name: player2,
+          data: player2Stat,
           color:"#FF0000",
         },
       ],
