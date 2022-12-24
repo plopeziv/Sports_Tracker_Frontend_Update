@@ -5,7 +5,7 @@ const FirstPlot = ({player}) => {
   const [contractItems, setContractItems] = useState([]);
 
   useEffect( () => {
-    fetch("https://plopez9.herokuapp.com/NBA/Contracts/?format=json")
+    fetch("http://127.0.0.1:8000//NBA/Contracts/?format=json")
     .then(response => response.json())
     .then(json => {
       setContractItems(json)
@@ -18,9 +18,9 @@ const FirstPlot = ({player}) => {
 
   if (contract !== undefined) {
     var scale = 1000000
-    var ylist = [contract.number_2019_20/scale, contract.number_2020_21/scale,
-          contract.number_2021_22/scale, contract.number_2022_23/scale,
-          contract.number_2023_24/scale];
+    var ylist = [contract.number_2022_23/scale, contract.number_2023_24/scale,
+          contract.number_2024_25/scale, contract.number_2025_26/scale,
+          contract.number_2026_27/scale, contract.number_2027_28/scale];
     } else {
       ylist = [];
     }
@@ -54,7 +54,7 @@ const FirstPlot = ({player}) => {
 
           xAxis: {
             type: "category",
-            data: ["2020", "2021", "2022", "2023", "2024", "2025"],
+            data: ["2023", "2024", "2025", "2026", "2027", "2028"],
             name: "Year",
             nameLocation: "middle",
             nameTextStyle: {

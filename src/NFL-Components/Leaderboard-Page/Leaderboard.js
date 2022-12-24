@@ -6,7 +6,7 @@ const LeaderTable = () => {
   const [yearlyStats, setYearlyStats] = useState([])
 
   useEffect( () => {
-    fetch("https://plopez9.herokuapp.com/NFL/NFLSummary/?format=json")
+    fetch("http://127.0.0.1:8000/NFL/NFLSummary/?format=json")
     .then(response => response.json())
     .then(json => {
       setYearlyStats(json)

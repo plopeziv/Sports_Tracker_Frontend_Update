@@ -5,7 +5,7 @@ const PlayerComparison = ({player1, player2}) => {
   const [weeklyStats, setWeeklyStats] = useState([])
 
   useEffect( () => {
-    fetch("https://plopez9.herokuapp.com/NFL/NFLStats/?format=json")
+    fetch("http://127.0.0.1:8000/NFL/NFLStats/?format=json")
     .then(response => response.json())
     .then(json => {
       setWeeklyStats(json)

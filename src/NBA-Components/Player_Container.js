@@ -11,13 +11,13 @@ const PlayerApp = ({player}) => {
   const [infoItems, setInfoItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://plopez9.herokuapp.com/NBA/Summary/?format=json")
+    fetch("http://127.0.0.1:8000/NBA/Summary/?format=json")
     .then(response => response.json())
     .then(json => {
       setSummaryItems(json)
       });
 
-    fetch("https://plopez9.herokuapp.com/NBA/PlayerInfo/?format=json")
+    fetch("http://127.0.0.1:8000/NBA/PlayerInfo/?format=json")
     .then(response => response.json())
     .then(json => {
       setInfoItems(json)

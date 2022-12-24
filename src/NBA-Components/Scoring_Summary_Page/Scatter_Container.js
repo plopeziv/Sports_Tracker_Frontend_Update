@@ -6,7 +6,7 @@ const ScatterApp = ({ player }) => {
   const [summaryItems, setSummaryItems] = useState([]);
 
   useEffect( () => {
-    fetch("https://plopez9.herokuapp.com/NBA/Summary/?format=json")
+    fetch("http://127.0.0.1:8000/NBA/Summary/?format=json")
     .then(response => response.json())
     .then(json => {
       setSummaryItems(json)
