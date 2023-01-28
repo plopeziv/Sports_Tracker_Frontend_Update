@@ -21,7 +21,7 @@
 .Main_Page{
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/Main-Page-Components/images/wrigley.jpg");
+  background-image: url("images/wrigley.jpg");
   height: 100vh;
   display: flex;
   justify-content: center;
